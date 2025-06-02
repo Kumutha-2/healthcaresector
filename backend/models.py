@@ -8,8 +8,8 @@ import os
 
 
 
-DATABASE_URL = os.environ.get("DATABASE_URL")
-engine = create_engine(DATABASE_URL)
+DB_URL = os.environ.get("DB_URL")
+engine = create_engine(DB_URL)
 Base = declarative_base()
 
 class User(Base):
