@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+cryptography
+streamlit
+requests
+pandas
+pydantic[email] 
