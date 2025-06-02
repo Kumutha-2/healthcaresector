@@ -6,10 +6,11 @@ import hashlib
 from cryptography.fernet import Fernet 
 import os
 
-Base = declarative_base()
+
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
+Base = declarative_base()
 
 class User(Base):
     __tablename__ = 'users'
