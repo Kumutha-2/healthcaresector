@@ -4,12 +4,12 @@ from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 import hashlib
 from cryptography.fernet import Fernet 
-
+import os
 
 Base = declarative_base()
 
-engine = create_engine("postgresql://myuser:mypassword@localhost/healthcare_app_db")
-
+DATABASE_URL = os.environ.get("DATABASE_URL")
+engine = create_engine(DATABASE_URL)
 
 class User(Base):
     __tablename__ = 'users'
