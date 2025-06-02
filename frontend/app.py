@@ -3,7 +3,7 @@ import requests
 import json
 import pandas as pd
 
-API_URL = "http://localhost:8000" 
+API_URL = "https://healthcaresector.onrender.com" 
 
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
